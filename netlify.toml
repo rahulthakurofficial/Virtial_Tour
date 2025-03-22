@@ -1,7 +1,7 @@
 [build]
-  base = "frontend"  # Set the base directory if your frontend is in a subfolder
+  base = "Frontend"  # Capital "F" to match the actual folder name
   command = "npm run build"
-  publish = "dist"  #  Corrected path
+  publish = "dist"  # Ensure build output goes into "dist"
 
 [[redirects]]
   from = "/*"
