@@ -4,7 +4,7 @@ import TwoD_Staging from "./Components/TwoD_Staging/TwoD_Staging";
 import Testimonial from "./Components/Testimonial/Testimonial";
 import FeedbackForm3D from "./Components/Feedback/Feedback";
 import Hero from "./Components/Hero/Hero";
-import Cards from "./Components/Cards/Cards";
+//import Cards from "./Components/Cards/Cards";
 
 const App = () => {
   
@@ -14,9 +14,9 @@ const App = () => {
       <section id="Hero">
         <Hero />
       </section>
-      <section id="Cards">
+      {/* <section id="Cards">
         <Cards />
-      </section>
+      </section> */}
       <section id="Project">
         <Project />
       </section>
