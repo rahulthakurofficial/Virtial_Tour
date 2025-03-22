@@ -7,7 +7,7 @@ const Cards = () => {
       <section className="hero">
         <h1>
           Customized Solution:
-          {/* <img className="img-logo" src="./public/vr.webp" alt="logo" /> */}
+          <img className="img-logo" src="./public/vr.webp" alt="logo" />
           <br />
           <em>Transforming Virtual Spaces into Reality</em>
         </h1>
