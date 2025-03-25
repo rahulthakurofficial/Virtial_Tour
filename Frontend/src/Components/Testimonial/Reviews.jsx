@@ -3,7 +3,7 @@ const reviews = [
     id: 1,
     name: "Sweta Mishra",
     job: "Software Engineer",
-    image: "/Image.jpg", // Directly in public folder
+    image: "/Image.jpg", 
     text: "I have had the pleasure of working with this team on several projects, and I am consistently impressed with their technical expertise and ability to deliver quality solutions on time and within budget. They are a true partner and an asset to any project.",
   },
   {
@@ -16,8 +16,8 @@ const reviews = [
   {
     id: 3,
     name: "Danish Xeria",
-    job: "Marketing Manager",
     image: "/Image2.jpg",
+    job: "Marketing Manager",
     text: "I am thrilled with the results of our recent marketing campaign, and it wouldn't have been possible without the hard work and dedication of the entire team. Thank you for your exceptional work!",
   },
   {
