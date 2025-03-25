@@ -1,14 +1,12 @@
-
-
 .testimonial-container {
   text-align: center;
   padding: 50px;
   background: #f9f9f9;
+}
 
-  h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-  }
+.testimonial-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 .testimonial-wrapper {
@@ -23,61 +21,178 @@
   height: 300px;
   perspective: 1000px;
   cursor: pointer;
+  position: relative;
+}
 
-  &:hover .testimonial-front {
-    transform: rotateY(180deg);
+.testimonial-cards:hover .testimonial-front {
+  transform: rotateY(180deg);
+}
+
+.testimonial-cards:hover .testimonial-back {
+  transform: rotateY(0deg);
+}
+
+.testimonial-front,
+.testimonial-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.testimonial-front {
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(0deg);
+}
+
+.testimonial-front img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-front h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.testimonial-front p {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.testimonial-back {
+  background: #4a90e2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+/* Responsive Design */
+
+/* Large Screens (Desktops) */
+@media screen and (max-width: 1200px) {
+  .testimonial-cards {
+    width: 220px;
+    height: 280px;
   }
 
-  &:hover .testimonial-back {
-    transform: rotateY(0deg);
+  .testimonial-front h3 {
+    font-size: 1.1rem;
   }
 
-  .testimonial-front,
-  .testimonial-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: transform 0.6s;
+  .testimonial-front p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablets (Portrait & Landscape) */
+@media screen and (max-width: 992px) {
+  .testimonial-container {
+    padding: 40px;
   }
 
-  .testimonial-front {
-    background: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
+  .testimonial-cards {
+    width: 200px;
+    height: 260px;
+  }
+
+  .testimonial-front img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .testimonial-front h3 {
+    font-size: 1rem;
+  }
+
+  .testimonial-front p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile Devices (Landscape) */
+@media screen and (max-width: 768px) {
+  .testimonial-container {
+    padding: 30px;
+  }
+
+  .testimonial-cards {
+    width: 180px;
+    height: 240px;
+  }
+
+  .testimonial-front img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .testimonial-front h3 {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-front p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile Devices (Portrait) */
+@media screen and (max-width: 576px) {
+  .testimonial-container {
     padding: 20px;
-    transform: rotateY(0deg);
-
-    img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-
-    h3 {
-      margin: 10px 0 5px;
-      font-size: 1.2rem;
-    }
-
-    p {
-      color: gray;
-      font-size: 0.9rem;
-    }
   }
 
-  .testimonial-back {
-    background: #4a90e2;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    padding: 20px;
-    transform: rotateY(180deg);
+  .testimonial-cards {
+    width: 160px;
+    height: 220px;
+  }
+
+  .testimonial-front img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .testimonial-front h3 {
+    font-size: 0.85rem;
+  }
+
+  .testimonial-front p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 400px) {
+  .testimonial-container {
+    padding: 15px;
+  }
+
+  .testimonial-cards {
+    width: 140px;
+    height: 200px;
+  }
+
+  .testimonial-front img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .testimonial-front h3 {
+    font-size: 0.8rem;
+  }
+
+  .testimonial-front p {
+    font-size: 0.65rem;
   }
 }
