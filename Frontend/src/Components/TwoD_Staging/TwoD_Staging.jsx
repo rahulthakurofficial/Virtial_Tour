@@ -16,8 +16,6 @@ const ImageHoverEffect = ({ before, after, price }) => {
       <div className="image-container">
         <img src={before} alt="Before" className="before-img" />
         <img src={after} alt="After" className="after-img" />
-        {/* <span className="label label-before">Before</span>
-        <span className="label label-after">After</span> */}
       </div>
 
       <div className="price-container">
