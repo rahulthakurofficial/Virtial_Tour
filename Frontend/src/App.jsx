@@ -3,16 +3,15 @@ import Footer from "./Components/Footer/Footer";
 import TwoD_Staging from "./Components/TwoD_Staging/TwoD_Staging";
 import Testimonial from "./Components/Testimonial/Testimonial";
 import FeedbackForm3D from "./Components/Feedback/Feedback";
-import Hero from "./Components/Hero/Hero";
 import Cards from "./Components/Cards/Cards";
+import Banner from "./Components/Banner/Banner";
+import Reviews from "./Components/Testimonial/Reviews"; 
 
 const App = () => {
-  
-
   return (
     <div>
-      <section id="Hero">
-        <Hero />
+      <section id="Banner">
+        <Banner />
       </section>
       <section id="Cards">
         <Cards />
@@ -24,7 +23,7 @@ const App = () => {
         <TwoD_Staging />
       </section>
       <section id="Testimonial">
-        <Testimonial />
+        <Testimonial Reviews={Reviews} /> 
       </section>
       <section id="Feedback">
         <FeedbackForm3D />
@@ -32,7 +31,6 @@ const App = () => {
       <section id="Footer">
         <Footer />
       </section>
-     
     </div>
   );
 };

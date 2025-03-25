@@ -1,48 +1,41 @@
-import React from "react";
-import "./Testimonial.scss";
+import React, { useState } from 'react';
+import TestimonialCard from './TestimonialCard';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import './Testimonial.scss'; 
+import  './Reviews';
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Rahul",
-    role: "pune builder",
-    feedback: "This service is amazing! Highly recommend it.",
-    image: "https://via.placeholder.com/100",
-  },
-  {
-    id: 2,
-    name: "Abhishek",
-    role: "Mumbai builder",
-    feedback: "Great experience, very professional and helpful!",
-    image: "https://via.placeholder.com/100",
-  },
-  {
-    id: 3,
-    name: "Aditya",
-    role: "Bengalore builder",
-    feedback: "Fantastic work! Will definitely use again.",
-    image: "https://via.placeholder.com/100",
-  },
-];
+const Testimonial = ({ Reviews }) => {
+  const [index, setIndex] = useState(0);
 
-const Testimonial = () => {
+  const leftShiftHandler = () => {
+    setIndex(index - 1 < 0 ? Reviews.length - 1 : index - 1);
+  };
+
+  const rightShiftHandler = () => {
+    setIndex(index + 1 >= Reviews.length ? 0 : index + 1);
+  };
+
+  const surpriseHandler = () => {
+    let randomIndex = Math.floor(Math.random() * Reviews.length);
+    setIndex(randomIndex);
+  };
+
   return (
-    <div className="testimonial-container">
-      <h2>What Our Clients Say</h2>
-      <div className="testimonial-wrapper">
-        {testimonials.map((testimony) => (
-          <div key={testimony.id} className="testimonial-card">
-            <div className="testimonial-front">
-              <img src={testimony.image} alt={testimony.name} />
-              <h3>{testimony.name}</h3>
-              <p>{testimony.role}</p>
-            </div>
-            <div className="testimonial-back">
-              <p>"{testimony.feedback}"</p>
-            </div>
-          </div>
-        ))}
+    <div className="testimonials-container">
+      <TestimonialCard review={Reviews[index]} />
+
+      <div className="controls">
+        <button onClick={leftShiftHandler} className="nav-button">
+          <FiChevronLeft />
+        </button>
+        <button onClick={rightShiftHandler} className="nav-button">
+          <FiChevronRight />
+        </button>
       </div>
+
+      {/* <button onClick={surpriseHandler} className="surprise-button">
+        Surprise Me
+      </button> */}
     </div>
   );
 };

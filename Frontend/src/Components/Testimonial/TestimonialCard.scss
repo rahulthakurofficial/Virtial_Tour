@@ -1,0 +1,192 @@
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  height: 450px;
+  margin: auto;
+}
+
+.image-container {
+  position: relative;
+  margin-top: -60px;
+}
+
+.profile-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 10;
+}
+
+.background-circle {
+  width: 140px;
+  height: 140px;
+  background: #7c3aed;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  z-index: -1;
+}
+
+.text-content {
+  margin-top: 10px;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.job {
+  color: #9f7aea;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.quote-icon {
+  color: #7c3aed;
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.review-text {
+  color: #4a5568;
+  font-size: 1rem;
+  margin: 15px 0;
+}
+
+/* Responsive Design */
+
+/* Large Screens (Desktops, Laptops) */
+@media screen and (max-width: 1200px) {
+  .testimonial-card {
+    max-width: 380px;
+    height: 430px;
+  }
+
+  .profile-image,
+  .background-circle {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* Tablets (Portrait & Landscape) */
+@media screen and (max-width: 992px) {
+  .testimonial-card {
+    max-width: 350px;
+    height: 400px;
+    padding: 15px;
+  }
+
+  .profile-image,
+  .background-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+
+  .job {
+    font-size: 0.85rem;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Devices (Landscape) */
+@media screen and (max-width: 768px) {
+  .testimonial-card {
+    max-width: 320px;
+    height: 380px;
+    padding: 12px;
+  }
+
+  .profile-image,
+  .background-circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .job {
+    font-size: 0.8rem;
+  }
+
+  .review-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Devices (Portrait) */
+@media screen and (max-width: 576px) {
+  .testimonial-card {
+    max-width: 280px;
+    height: 360px;
+    padding: 10px;
+  }
+
+  .profile-image,
+  .background-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .job {
+    font-size: 0.75rem;
+  }
+
+  .review-text {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 400px) {
+  .testimonial-card {
+    max-width: 260px;
+    height: 340px;
+    padding: 8px;
+  }
+
+  .profile-image,
+  .background-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .job {
+    font-size: 0.7rem;
+  }
+
+  .review-text {
+    font-size: 0.75rem;
+  }
+}

@@ -1,44 +1,52 @@
+
+
 import React from "react";
 import "./Cards.scss";
 
-const Cards = () => {
+const testimonials = [
+  {
+    id: 1,
+    name: "Rahul",
+    role: "pune builder",
+    feedback: "This service is amazing! Highly recommend it.",
+    image: "https://via.placeholder.com/100",
+  },
+  {
+    id: 2,
+    name: "Abhishek",
+    role: "Mumbai builder",
+    feedback: "Great experience, very professional and helpful!",
+    image: "https://via.placeholder.com/100",
+  },
+  {
+    id: 3,
+    name: "Aditya",
+    role: "Bengalore builder",
+    feedback: "Fantastic work! Will definitely use again.",
+    image: "https://via.placeholder.com/100",
+  },
+];
+
+const Testimonial = () => {
   return (
-    <div>
-      <section className="hero">
-        <h1>
-          Customized Solution:
-          <img className="img-logo" src="/vr.webp" alt="logo" />
-
-          <br />
-          <em>Transforming Virtual Spaces into Reality</em>
-        </h1>
-      </section>
-
-      <section className="cards">
-        {cardData.map((card, index) => (
-          <div className="card" key={index}>
-            <h3 className="card-title">{card.title}</h3>
-            <p className="card-content">{card.desc}</p>
+    <div className="testimonial-container">
+      <h2>What Our Clients Say</h2>
+      <div className="testimonial-wrapper">
+        {testimonials.map((testimony) => (
+          <div key={testimony.id} className="testimonial-cards">
+            <div className="testimonial-front">
+              <img src={testimony.image} alt={testimony.name} />
+              <h3>{testimony.name}</h3>
+              <p>{testimony.role}</p>
+            </div>
+            <div className="testimonial-back">
+              <p>"{testimony.feedback}"</p>
+            </div>
           </div>
         ))}
-      </section>
+      </div>
     </div>
   );
 };
 
-const cardData = [
-  {
-    title: "360° Digital Staging",
-    desc: "Whether it’s a residential home, commercial property, or hospitality space...",
-  },
-  {
-    title: "360° Digital Renovation",
-    desc: "Experience the future of interior design with our exclusive 360° Digital Transformation service...",
-  },
-  {
-    title: "Digital 360° CGI VR Tour",
-    desc: "Step into the future of real estate with our cutting-edge 360° CGI technology...",
-  },
-];
-
-export default Cards;
+export default Testimonial;
